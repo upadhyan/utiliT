@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 DESCRIPTION = 'Python utilities'
 LONG_DESCRIPTION = 'A package to help develop code faster through '
 

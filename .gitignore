@@ -1,5 +1,5 @@
-
-test.py
-test.yaml
 dist/
 utiliT.egg-info/
+.vscode/
+tests/
+build/
