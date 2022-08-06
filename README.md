@@ -1,2 +1,2 @@
 # utiliT
-Toolkit to help get your python programs started faster
+A package of utilities to help you stop re-writing the same code over and over again.

@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 DESCRIPTION = 'Python utilities'
-LONG_DESCRIPTION = 'A package to help develop code faster through '
+LONG_DESCRIPTION = 'A package of utilities to help you stop re-writing the same code over and over again.'
 
 # Setting up
 setup(
