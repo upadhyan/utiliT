@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-VERSION = '0.0.4'
+VERSION = '0.0.5'
 DESCRIPTION = 'Python utilities'
 LONG_DESCRIPTION = 'A package of utilities to help you stop re-writing the same code over and over again.'
 

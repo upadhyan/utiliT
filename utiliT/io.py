@@ -14,7 +14,7 @@ class ConfigHelper(dict):
         self.update(dictionary)
 
     def load_yaml(self, yaml_file: str):
-        if Path(yaml_file).suffix != '.yaml':
+        if Path(yaml_file).suffix != '.yaml' and Path(yaml_file).suffix != '.yml':
             raise ValueError('Input File not a .yaml File')
         with open(yaml_file) as f:
             data = load(f, Loader=SafeLoader)
@@ -42,3 +42,9 @@ def pickle_writer(file_name, object):
     with open(file_name, 'wb') as f:
         pickle.dump(object, f)
 
+def read_txt(file_name, single_string = False):
+    with open(file_name) as f:
+        lines = f.readlines()
+    if single_string:
+        return ' '.join(lines)
+    return lines
