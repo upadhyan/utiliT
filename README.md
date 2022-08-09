@@ -2,7 +2,7 @@
 
 ## Description
 
-A package of utilities to help you stop re-writing the same code over and over again.
+This package serves as a wrapper for many other packages and serves to help streamline a lot of mundane and repetitive tasks so you can focus on thinking rather than googling how to read a yaml file. 
 
 ## Installation
 
