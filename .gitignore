@@ -3,3 +3,4 @@ utiliT.egg-info/
 .vscode/
 tests/
 build/
+utiliT/__pycache__/

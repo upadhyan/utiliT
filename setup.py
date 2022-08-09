@@ -15,7 +15,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=['pyyaml', 'pathlib'],
+    install_requires=['pyyaml', 'pathlib', 'ez-yaml'],
     keywords=['python', 'utilities', 'fileio'],
     classifiers=[
         "Development Status :: 1 - Planning",
