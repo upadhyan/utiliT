@@ -7,6 +7,7 @@ import pickle
 import toml
 import ez_yaml
 
+
 class ConfigHelper(dict):
 
     def __init__(self) -> None:
@@ -84,6 +85,7 @@ def read_txt(file_name, string=False):
         return '\n'.join(lines)
     return lines
 
+
 def dump_txt(data, file_name):
     if type(data) is str:
         write = data
@@ -91,6 +93,7 @@ def dump_txt(data, file_name):
         write = "\n".join(data)
     with open(file_name, 'wb') as f:
         f.writelines(write)
+
 
 def read_yaml(yaml_, string=False):
     if string:
@@ -100,6 +103,7 @@ def read_yaml(yaml_, string=False):
             data = yaml.load(f, Loader=yaml.SafeLoader)
     return data
 
+
 def read_json(json_, json_string=False):
     if json_string:
         data = json.loads(json_)
@@ -107,6 +111,7 @@ def read_json(json_, json_string=False):
         with open(json_, 'rb') as f:
             data = json.load(f)
     return data
+
 
 def read_toml(toml_: str, toml_string=False):
     if toml_string:
@@ -116,12 +121,14 @@ def read_toml(toml_: str, toml_string=False):
             data = toml.load(f)
     return data
 
-def dump_yaml(data, yaml_ = None):
+
+def dump_yaml(data, yaml_=None):
     if yaml_ is None:
         return ez_yaml.to_string(data)
     else:
         with open(yaml_, 'wb') as f:
             yaml.dump(data, f)
+
 
 def dump_json(data, json_=None):
     if json_ is None:
@@ -129,6 +136,7 @@ def dump_json(data, json_=None):
     else:
         with open(json_, 'wb') as f:
             json.dump(data, f)
+
 
 def dump_toml(data, toml_=None):
     if toml_ is None:

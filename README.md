@@ -18,7 +18,7 @@ pip install utiliT
 
 One main use case for utiliT is to simplify file reading and writing. Instead of having to import multiple packages and deal with `open` statements, `utiliT.io` helps simplify this and reading and writing YAML, TOML, JSON, TXT, and Pickle files can be done in one line
 
-**YAML, TOML, JSON Reading**
+**YAML, TOML, JSON Reading:**
 This toolbox can help to read YAML, TOML, and JSON files in as dictionaries. Additionally, there are functions to write each of these to
 Using the functions for YAML, TOML, and JSON reading and writing are extremely similar (the only difference being the function names) and a demonstration with YAML files is shown below.
 
@@ -41,12 +41,12 @@ yaml_string = dump_yaml(data)
 
 Replace the `read_yaml` function with `read_toml` or `read_json` and replace `dump_yaml` with `dump_toml` and `dump_json` to read/write TOML and JSON files respectively. The function parameters do not change.
 
-**TXT Files**
+**TXT Files:**
 You can also use `read_txt` to read the text in files line by line. You have the option to get an array of the lines as strings, or a single string with the contents of the entire document.
 You can also use `dump_txt` to dump an array of strings and a single string.
 
 ```python
-from utiliT.io import read_txt
+from utiliT.io import read_txt, dump_txt
 
 #Read as array of strings
 data = read_txt('file.txt')
@@ -62,7 +62,20 @@ data = dump_txt(data, 'file.txt')
 
 ```
 
-**Pickle Files**
+**Pickle Files:**
+`utiliT` also makes reading and writing pickle files easy!
+
+```python
+from utiliT.io import read_pickle, dump_pickle
+
+#Read a pickle object
+object_ = read_pickle('object.pickle')
+
+# Write a pickle object
+dump_pickle(object_, 'object.pickle')
+
+```
+
 
 ## Contact
 
