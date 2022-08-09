@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-VERSION = '0.0.5'
+VERSION = '0.0.6'
 DESCRIPTION = 'Python utilities'
 LONG_DESCRIPTION = 'A package of utilities to help you stop re-writing the same code over and over again.'
 
@@ -16,7 +16,7 @@ setup(
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
     install_requires=['pyyaml', 'pathlib'],
-    keywords=['python', 'utilities'],
+    keywords=['python', 'utilities', 'fileio'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
