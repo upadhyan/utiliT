@@ -41,10 +41,13 @@ class ConfigHelper(dict):
                 data = toml.load(f)
         self.load_dict(data)
 
-    def dump_yaml(self, yaml_):
+    def dump_yaml(self, yaml_ = None):
         data = self.__dict__
-        with open(yaml_, 'wb') as f:
-            yaml.dump(data, f)
+        if yaml_ is None:
+            return ez_yaml.to_string(data)
+        else:
+            with open(yaml_, 'wb') as f:
+                yaml.dump(data, f)
 
     def dump_json(self, json_=None):
         data = self.__dict__

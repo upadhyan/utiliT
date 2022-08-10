@@ -41,6 +41,37 @@ yaml_string = dump_yaml(data)
 
 Replace the `read_yaml` function with `read_toml` or `read_json` and replace `dump_yaml` with `dump_toml` and `dump_json` to read/write TOML and JSON files respectively. The function parameters do not change.
 
+
+**ConfigHelper:** Along with reading YAML, JSON, and TOML files, `utilit.io` offers a `ConfigHelper` class that extends a dictionary. This class allows you to organize any configuration you have into a single object and access passed in values through key-value pairs and as class variables. This class can load in YAML, TOML, and JSON files / strings along with traditional dictionaries. 
+
+Demo: 
+Our YAML file (`file.yaml`)
+```YAML
+foo: 'bar'
+fizz: 'buzz'
+```
+
+```python
+from utilit.io import ConfigHelper
+
+c = ConfigHelper()
+c.load_yaml('file.yaml')
+
+## Both of these will display 'bar'
+print(c.foo)
+print(c['foo'])
+```
+As this extends a dictionary, traditional dictionary operations can also be performed on it. Additionally, the contents of this object can be written to a YAML, JSON, or TOML file or string.
+
+```python
+c.dump_yaml('file.yaml')
+c.dump_json('file.json')
+c.dump_toml('file.toml')
+```
+
+If no file name is passed into this, these functions will output a string. 
+
+
 **TXT Files:**
 You can also use `read_txt` to read the text in files line by line. You have the option to get an array of the lines as strings, or a single string with the contents of the entire document.
 You can also use `dump_txt` to dump an array of strings and a single string.

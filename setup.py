@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 VERSION = '0.0.6'
 DESCRIPTION = 'Python utilities'
-LONG_DESCRIPTION = 'A package of utilities to help you stop re-writing the same code over and over again.'
+LONG_DESCRIPTION = 'A package of utilities to help you stop re-writing the same code over and over again. View https://github.com/upadhyan/utiliT for more information'
 
 # Setting up
 setup(
